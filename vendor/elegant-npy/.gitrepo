@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:CINPLA/elegant-npy.git
+	branch = dev
+	commit = 400d55ff5bedfac9aa63d5fe0f9f9be83342b037
+	parent = 96760be9c3fc6306b3404fa9a7539ddde71ccd62
+	cmdver = 0.3.0
