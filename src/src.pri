@@ -1,10 +1,11 @@
 include($$PWD/../vendor/elegant-npy/elegant-npy.pri)
 
 HEADERS += \
-    $$PWD/object.h \
     $$PWD/attribute.h \
-    $$PWD/dataset_p.h \
     $$PWD/dataset.h \
+    $$PWD/datatype.h \
+    $$PWD/object.h \
+    $$PWD/dataset_p.h \
     $$PWD/file.h \
     $$PWD/group.h \
     $$PWD/converters/armadillo-converters.h \
@@ -15,8 +16,7 @@ HEADERS += \
     $$PWD/io/writer.h \
     $$PWD/utils/demangle.h \
     $$PWD/utils/errorhelper.h \
-    $$PWD/utils/logging.h \
-    $$PWD/datatype.h
+    $$PWD/utils/logging.h
 
 SOURCES += \
     $$PWD/object.cpp \
