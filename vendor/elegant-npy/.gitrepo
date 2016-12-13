@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:CINPLA/elegant-npy.git
 	branch = dev
-	commit = 400d55ff5bedfac9aa63d5fe0f9f9be83342b037
-	parent = 96760be9c3fc6306b3404fa9a7539ddde71ccd62
+	commit = 33f79d9e189ae8b3eca4d111f98c624b3e208fa5
+	parent = 59f1f7d6530721f2d2801369bfb71129d77eed74
 	cmdver = 0.3.0
