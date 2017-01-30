@@ -94,6 +94,10 @@ Object Group::item(string key) const
     boost::filesystem::path keyPath = path() / key;
     boost::filesystem::path metaFilePath = keyPath / "meta.yml";
 
+    if(!boost::filesystem::exists(metaFilePath)) {
+        std::cout << "Could not find " << metaFilePath << std::endl;
+        return Object();
+    }
     YAML::Node rootNode = YAML::LoadFile(metaFilePath.string());
     YAML::Node exdirNode = rootNode["exdir"];
     Type type = Type::Invalid;
