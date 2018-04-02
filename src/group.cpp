@@ -92,7 +92,7 @@ Object Group::item(string key) const
         throw(std::runtime_error("Could not find key"));
     }
     boost::filesystem::path keyPath = path() / key;
-    boost::filesystem::path metaFilePath = keyPath / "meta.yml";
+    boost::filesystem::path metaFilePath = keyPath / "exdir.yaml";
 
     if(!boost::filesystem::exists(metaFilePath)) {
         std::cout << "Could not find " << metaFilePath << std::endl;

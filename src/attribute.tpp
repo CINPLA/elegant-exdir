@@ -33,12 +33,7 @@ T Attribute::value(Object::ConversionFlags mode) const
         mode = m_inheritedConversionFlags;
     }
     // TODO
-}
-
-template<typename T>
-void Attribute::operator=(const T &object)
-{
-    // TODO
+    return T();
 }
 
 template<typename T>
@@ -57,7 +52,8 @@ inline T& operator>>(const elegant::exdir::Attribute &attribute, T &other)
 
 inline std::ostream& operator<< (std::ostream &out, const elegant::exdir::Attribute &attribute)
 {
-    // TODO
+    // TODO add output
+    out << "Attribute: " << attribute.name();
     return out;
 }
 

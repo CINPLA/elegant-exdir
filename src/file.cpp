@@ -21,7 +21,7 @@ File::File(string folderName, File::OpenMode mode, ConversionFlags conversionFla
     m_type = Type::File;
     bool alreadyExists = boost::filesystem::exists(folderName);
     if (alreadyExists) {
-        // TODO check if valid object folder and proper meta.yml
+        // TODO check if valid object folder and proper exdir.yaml
     }
     bool shouldCreateFolder = false;
 

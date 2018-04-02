@@ -131,7 +131,7 @@ bool Object::isNonExistingNamed() const
 vector<string> Object::attributeKeys() const
 {
     vector<string> keys;
-    fs::path filePath = path() / "attributes.yml";
+    fs::path filePath = path() / "attributes.yaml";
     if(!fs::exists(filePath)) {
         return keys;
     }
@@ -161,7 +161,7 @@ vector<Attribute> Object::attributes() const
         throw std::runtime_error("Trying to access attributes of invalid object");
     }
     vector<Attribute> result;
-    fs::path filePath = path() / "attributes.yml";
+    fs::path filePath = path() / "attributes.yaml";
     if(!fs::exists(filePath)) {
         return result;
     }
@@ -177,7 +177,7 @@ bool Object::hasAttribute(string name) const
     if(!isValid()) {
         throw std::runtime_error("Trying to probe attribute of invalid object");
     }
-    fs::path filePath = path() / "attributes.yml";
+    fs::path filePath = path() / "attributes.yaml";
     if(!fs::exists(filePath)) {
         return false;
     }

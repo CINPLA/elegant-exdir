@@ -39,6 +39,7 @@ Attribute::Attribute(const Attribute &other)
 Attribute &Attribute::operator=(const Attribute &other)
 {
     // TODO
+    (void)other;
     throw std::runtime_error("Not implemented");
 }
 
@@ -66,7 +67,7 @@ Datatype::Type Attribute::datatype() const
 
 bool Attribute::isValid() const
 {
-    fs::path filePath = m_path / "attributes.yml";
+    fs::path filePath = m_path / "attributes.yaml";
     if(!fs::exists(filePath)) {
         return true;
     }
@@ -111,7 +112,7 @@ boost::filesystem::path Attribute::path() const
 std::string Attribute::toString() const
 {
     // TODO perhaps just return the YAML node?
-    fs::path filePath = m_path / "attributes.yml";
+    fs::path filePath = m_path / "attributes.yaml";
     if(!fs::exists(filePath)) {
         cerr << filePath << endl;
         throw std::runtime_error("Requested attribute file does not exist");
@@ -155,6 +156,7 @@ std::string Attribute::toString() const
 Attribute &Attribute::operator=(const string &value)
 {
     // TODO
+    (void)value;
     throw std::runtime_error("Not implemented");
 }
 
